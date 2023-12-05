@@ -8,13 +8,13 @@ function itemScam (cname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
-
-    miFrame.setAttribute("src", csite);
-
-    th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
-    tp.innerHTML = cdate;
-    if (cuid == site) {
+    if (site == cuid) {
         document.getElementById("main").style.display = "block";
+        miFrame.setAttribute("src", csite);
+
+        th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
+        tp.innerHTML = cdate;
+    } else {
     }
 }
 

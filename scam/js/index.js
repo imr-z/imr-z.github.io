@@ -7,8 +7,8 @@ function itemScam (cname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
-    var meta1 = document.createElement("meta");
-    var meta2 = document.createElement("meta");
+    var meta1 = document.getElementById("meimg1");
+    var meta2 = document.getElementById("meimg2");
     if (site == cuid) {
         meta1.setAttribute("property", "og:image");
         meta1.setAttribute("content", csite);

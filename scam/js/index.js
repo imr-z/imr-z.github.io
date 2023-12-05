@@ -62,6 +62,7 @@ function itemScam (cname, csname, csite, cdate, cuid) {
         tp.setAttribute("style", "color:darkorange;");
         tpp.setAttribute("style", "font-size:12px;color:chartreuse;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;");
         ta.setAttribute("style", "color:chartreuse;text-decoration:none;");
+        ta.setAttribute("target", "_blank");
         ta.setAttribute("title", csname);
         ta.setAttribute("alt", csname);
         if (csite == "https://imr-z.github.io/scam/img/sites.google.com_view_grandparkhotelrestaurantcom_halaman-muka.png") {

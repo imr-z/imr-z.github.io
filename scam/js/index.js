@@ -4,18 +4,17 @@ if (!site || site == "") {
 }
 
 function itemScam (cname, csite, cdate, cuid) {
-    console.log(cuid, site);
     var miFrame = document.getElementById("miframe");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
     if (site == cuid) {
         document.getElementById("main").style.display = "block";
-        miFrame.setAttribute("src", csite);
+        miFrame.setAttribute("content", "frame-ancestors 'none'");
+        miFrame.src = csite;
 
         th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
         tp.innerHTML = cdate;
-    } else {
-    }
+    } else {}
 }
 
 function FetchDataScam() {

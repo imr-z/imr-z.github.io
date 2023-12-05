@@ -57,12 +57,17 @@ function itemScam (cname, csname, csite, cdate, cuid) {
         document.getElementById("main").style.display = "block";
         document.getElementById("canv").style.display = "none";
         miFrame.setAttribute("src", csite);
-        ta.setAttribute("href", csite);
         ta.setAttribute("title", csname);
         ta.setAttribute("alt", csname);
         ta.setAttribute("style", "font-size:12px;color:green;text-decoration:none;");
+        if (csite == "https://imr-z.github.io/scam/img/sites.google.com_view_grandparkhotelrestaurantcom_halaman-muka.png") {
+            ta.setAttribute("href", "https://sites.google.com/view/grandparkhotelrestaurantcom/");
+            ta.innerHTML = "https://sites.google.com/view/grandparkhotelrestaurantcom/";
+        } else {
+            ta.setAttribute("href", csite);
+            ta.innerHTML = csite;
+        }
         th2.innerHTML = "S C A M";
-        ta.innerHTML = csite;
         th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
         tp.innerHTML = cdate;
     } else {}

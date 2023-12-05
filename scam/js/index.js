@@ -32,9 +32,10 @@ function matrix () {
 
 setInterval(matrix, 50);
 
-function itemScam (cname, csite, cdate, cuid) {
+function itemScam (cname, csname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
     var th2 = document.getElementById("smoking");
+    var ta = document.getElementById("mmurl");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
     var meta1 = document.getElementById("meimg1");
@@ -56,7 +57,12 @@ function itemScam (cname, csite, cdate, cuid) {
         document.getElementById("main").style.display = "block";
         document.getElementById("canv").style.display = "none";
         miFrame.setAttribute("src", csite);
+        ta.setAttribute("href", csite);
+        ta.setAttribute("title", csname);
+        ta.setAttribute("alt", csname);
+        ta.setAttribute("style", "font-size:12px;color:green;text-decoration:none;");
         th2.innerHTML = "S C A M";
+        ta.innerHTML = csite;
         th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
         tp.innerHTML = cdate;
     } else {}
@@ -67,10 +73,11 @@ function FetchDataScam() {
         snapshot.forEach(
             function(ChildSnapshot){
                 let cname = ChildSnapshot.val().name;
+                let csname = ChildSnapshot.val().name_site;
                 let csite = ChildSnapshot.val().site;
                 let cdate = ChildSnapshot.val().date;
                 let cuid = ChildSnapshot.val().uid;
-                itemScam(cname, csite, cdate, cuid);
+                itemScam(cname, csname, csite, cdate, cuid);
             }
         );
     });

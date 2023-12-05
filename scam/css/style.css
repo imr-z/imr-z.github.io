@@ -17,6 +17,8 @@ body, html {
   -webkit-filter: blur(4px);
   height: 100%; 
   width: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

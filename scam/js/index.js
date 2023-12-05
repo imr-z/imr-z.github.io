@@ -34,6 +34,7 @@ setInterval(matrix, 50);
 
 function itemScam (cname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
+    var th2 = document.getElementById("smoking");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
     var meta1 = document.getElementById("meimg1");
@@ -55,7 +56,7 @@ function itemScam (cname, csite, cdate, cuid) {
         document.getElementById("main").style.display = "block";
         document.getElementById("canv").style.display = "none";
         miFrame.setAttribute("src", csite);
-
+        th2.innerHTML = "S C A M";
         th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
         tp.innerHTML = cdate;
     } else {}

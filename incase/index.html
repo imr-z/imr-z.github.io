@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+        <title>Mr.Z</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="../assets/firebase/index.js"></script>
+        <script type="text/javascript" src="../assets/core/index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="mform">
+            <center class="simg">
+                <img width="220px" src="../assets/icon/logo.png">
+            </center>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Ex. Jhon" id="name" name="name" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input class="input-field" type="email" placeholder="Ex. example@email.com" id="email" name="email" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-id-card-o icon"></i>
+                <input class="input-field" type="text" placeholder="Ex. Example" id="namesite" name="namesite" required>
+            </div>
+              
+            <div class="input-container">
+                <i class="fa fa-bug icon"></i>
+                <input class="input-field" type="text" placeholder="Ex. https://example.com" id="site" name="site" required>
+            </div>
+
+            <button type="submit" id="insert" class="btn-sends">Make a complaint</button>
+        </div>
+        <div class="mform">
+            <div id="alerterr" class="danger">
+                Don't be empty!
+            </div>
+
+            <div id="success" class="success">
+                <input id="siteview">
+                <div class="tooltip">
+                <button onclick="myFunction()" onmouseout="outFunc()">
+                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

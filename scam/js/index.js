@@ -35,7 +35,6 @@ setInterval(matrix, 50);
 function itemScam (cname, csname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
     var th2 = document.getElementById("smoking");
-    var ta = document.getElementById("mmurl");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
     var meta1 = document.getElementById("meimg1");
@@ -43,6 +42,8 @@ function itemScam (cname, csname, csite, cdate, cuid) {
     var meta3 = document.getElementById("meimg3");
     var meta4 = document.getElementById("meimg4");
     var meta5 = document.getElementById("meimg5");
+    var tpp = document.getElementById("mmurl");
+    var ta = document.createElement("a");
     if (site == cuid) {
         meta1.setAttribute("property", "og:image");
         meta1.setAttribute("content", csite);
@@ -57,9 +58,12 @@ function itemScam (cname, csname, csite, cdate, cuid) {
         document.getElementById("main").style.display = "block";
         document.getElementById("canv").style.display = "none";
         miFrame.setAttribute("src", csite);
+        th2.setAttribute("style", "color:brown;");
+        tp.setAttribute("style", "color:darkorange;");
+        tpp.setAttribute("style", "font-size:12px;color:chartreuse;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;");
+        ta.setAttribute("style", "color:chartreuse;text-decoration:none;");
         ta.setAttribute("title", csname);
         ta.setAttribute("alt", csname);
-        ta.setAttribute("style", "font-size:12px;color:green;text-decoration:none;");
         if (csite == "https://imr-z.github.io/scam/img/sites.google.com_view_grandparkhotelrestaurantcom_halaman-muka.png") {
             ta.setAttribute("href", "https://sites.google.com/view/grandparkhotelrestaurantcom/");
             ta.innerHTML = "https://sites.google.com/view/grandparkhotelrestaurantcom/";
@@ -68,8 +72,10 @@ function itemScam (cname, csname, csite, cdate, cuid) {
             ta.innerHTML = csite;
         }
         th2.innerHTML = "S C A M";
-        th1.innerHTML = "<sup style='font-size:14px;'>By </sup>"+cname;
+        th1.innerHTML = "<sup style='font-size:14px;color:brown;'>By </sup>"+cname;
         tp.innerHTML = cdate;
+
+        tpp.appendChild(ta);
     } else {}
 }
 

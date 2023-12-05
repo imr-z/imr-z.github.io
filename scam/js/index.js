@@ -7,10 +7,13 @@ function itemScam (cname, csite, cdate, cuid) {
     var miFrame = document.getElementById("miframe");
     var th1 = document.getElementById("mname");
     var tp = document.getElementById("mdate");
-    var mrel = document.createElement("meta");
+    var meta1 = document.createElement("meta");
+    var meta2 = document.createElement("meta");
     if (site == cuid) {
-        mrel.setAttribute("property", "og:image");
-        mrel.setAttribute("content", csite);
+        meta1.setAttribute("property", "og:image");
+        meta1.setAttribute("content", csite);
+        meta2.setAttribute("name", "twitter:image");
+        meta2.setAttribute("content", csite);
         document.getElementById("main").style.display = "block";
         miFrame.setAttribute("src", csite);
 
